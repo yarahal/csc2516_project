@@ -44,7 +44,7 @@ class Metrics:
         metrics['recall'] = recall_score(y_dis,y_pred_dis)
         metrics['f1_score'] = f1_score(y_dis,y_pred_dis)
         metrics['accuracy'] = accuracy_score(y_dis,y_pred_dis)
-        metrics['auc'] = roc_auc_score(y_dis,y_pred_dis)
+        metrics['auc'] = roc_auc_score(y_dis,y_pred)
         return metrics
     
     def evaluate_k_metrics(self, y_true, y_pred, k, pos_threshold=0.75, neg_threshold=0.0):
